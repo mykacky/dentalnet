@@ -505,21 +505,26 @@ width: 11px;}
 	9) Submit Start
 ===========================*/
 
-#submit-area{ background: #F3F5F5; padding-top: 90px; padding-bottom: 120px}
-#submit-area .block{}
+#submit-area{ 
+background: #F3F5F5; padding-top: 90px; padding-bottom: 120px}
+#submit-area .block{ margin-left: auto;
+margin-right: auto;
+ }
 .submit-contant{}
 .submit-header{text-align: center; padding-bottom: 50px; }
 .submit-header i{ font-size: 36px; margin-right: 20px; color: #8C9494;}
 .submit-header h3{color:#8C9494; font-size: 36px; font-family: 'Raleway', sans-serif; font-weight: 700; display: inline}
 .submit-area{margin-left: 180px;}
-.submit-bottom{border: 2px solid #BBC3C2; float: left;  border-radius: 40px;height: 71px; background: #FFFFFF}
+.submit-bottom{margin-left: auto; margin-right: auto; border: 2px solid #BBC3C2; /*float: left;*/  border-radius: 40px;height: 71px; background: #FFFFFF}
 .submit-bottom form{}
 .submit-bottom form input[type=text]{border: medium none;
 height: 56px;
 margin-left: 24px;
 font-size: 14px; color:#8C9494; font-family: 'Raleway', sans-serif; font-weight: 400;
 background: #FFFFFF; width: 555px;}
-.submit-bottom form input[type=submit]{border: none; padding: 21px 55px; background: #5DCA88; color:#fff; font-size: 20px;font-family: 'Proxima Nova Regular'; font-weight: 700; text-transform: uppercase;border-radius: 40px;}
+.submit-bottom form input[type=submit]{margin-left: auto;
+margin-right: auto;
+order: none; padding: 21px 55px; background: #5DCA88; color:#fff; font-size: 20px;font-family: 'Proxima Nova Regular'; font-weight: 700; text-transform: uppercase;border-radius: 40px;}
 	
 /*=========================
 	 Submit CLOSE
