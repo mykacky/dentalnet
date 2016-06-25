@@ -1,0 +1,2 @@
+class EvaController < ApplicationController
+end
