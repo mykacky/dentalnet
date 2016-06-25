@@ -11,4 +11,9 @@ class DentalnetController < ApplicationController
     @eva = Eva.find(2)
   end
 
+  def comment
+    @eva = Eva.find(2)
+  end
+
+
 end

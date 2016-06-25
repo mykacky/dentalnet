@@ -522,9 +522,13 @@ height: 56px;
 margin-left: 24px;
 font-size: 14px; color:#8C9494; font-family: 'Raleway', sans-serif; font-weight: 400;
 background: #FFFFFF; width: 555px;}
+.submit-bottom form input[type=textarea]{border: medium none;
+height: 56px;
+margin-left: 50px;
+font-size: 14px; color:#8C9494; font-family: 'Raleway', sans-serif; font-weight: 400;
+background: #FFFFFF; width: 555px;}
 .submit-bottom form input[type=submit]{margin-left: auto;
-margin-right: auto;
-order: none; padding: 21px 55px; background: #5DCA88; color:#fff; font-size: 20px;font-family: 'Proxima Nova Regular'; font-weight: 700; text-transform: uppercase;border-radius: 40px;}
+margin-right: auto; order: none; padding: 21px 55px; background: #5DCA88; color:#fff; font-size: 20px;font-family: 'Proxima Nova Regular'; font-weight: 700; text-transform: uppercase;border-radius: 40px;}
 	
 /*=========================
 	 Submit CLOSE
@@ -574,8 +578,24 @@ width: 42px;}
 .teb-icon-edit{ height: 170px;width: 170px; margin: 0 auto; color:#5DCA88;}
 .teb-icon-edit i{font-size: 170px}
 
+/*=========================
+     STAR Evaluation
+===========================*/
 
-
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+.rating > span:hover:before,
+.rating > span:hover ~ span:before {
+   content: "\2605";
+   position: absolute;
+}
 
 
 
