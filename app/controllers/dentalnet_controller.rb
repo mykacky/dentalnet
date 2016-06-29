@@ -15,5 +15,10 @@ class DentalnetController < ApplicationController
     @eva = Eva.find(2)
   end
 
+  def location
+    @eva = Eva.find(2)
+  end
+
+
 
 end

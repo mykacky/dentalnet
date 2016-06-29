@@ -1,196 +1,177 @@
 <!--  <p>Hellp World!</p> -->
 <!--  <%= @eva.user_comment %> -->
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<header style="background-color:gray">DELTAL NET</header>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<header>DENTAL NET</header>
+
+<body>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 <div class="container-fluid">
+
   <div class="row">
-    <div class="col-xs-2" style="background-color:red;">Red</div>
-    <div class="col-xs-8" style="background-color:blue;"><input type="search" class="form-control" placeholder="search"></div>
-    <div class="col-xs-2" style="background-color:yellow;"><button type="submit" class="btn btn-default">Submit</button></div>
+    <div class="col-xs-12 col-space"></div>
   </div>
 
   <div class="row">
-    <div class="col-xs-6" style="background-color:red;">
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">得意なジャンル
-      </label>
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10">
+      <form action="">
+        <input type="text" class="form-control">
     </div>
-    
-    <div class="col-xs-6" style="background-color:blue;">
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">セラミック
-      </label>
-    </div>
+    <div class="col-xs-1"></div>
   </div>
 
   <div class="row">
-    <div class="col-xs-6" style="background-color:red;">
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">待ち時間が短い
-      </label>
-    </div>
-    
-    <div class="col-xs-6" style="background-color:blue;">
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">根管治療
-      </label>
-    </div>
+    <div class="col-xs-12 col-space"></div>
   </div>
 
-
   <div class="row">
-    <div class="col-xs-6" style="background-color:red;">
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">ブリッジ
-      </label>
+    <div class="col-xs-2 col-main"></div>
+    <div class="col-xs-3 col-main">
+        <input name="ceramic" type="checkbox" class="form-control">セラミック
     </div>
-    
-    <div class="col-xs-6" style="background-color:blue;">
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">短期集中
-      </label>
+    <div class="col-xs-2 col-main"></div>
+    <div class="col-xs-3 col-main">
+      <input name="waitingtime" type="checkbox" class="form-control">待ち時間が短い
     </div>
+    <div class="col-xs-2 col-main"></div>
   </div>
 
+  <div class="row">
+    <div class="col-xs-2 col-main"></div>
+    <div class="col-xs-3 col-main">
+        <input name="root" type="checkbox" class="form-control">根管治療
+    </div>
+    <div class="col-xs-2 col-main"></div>
+    <div class="col-xs-3 col-main">
+      <input name="bridge" type="checkbox" class="form-control">ブリッジ
+    </div>
+    <div class="col-xs-2 col-main"></div>
+  </div>
 
   <div class="row">
-    <div class="col-xs-6" style="background-color:red;">
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">ホワイトニング
-      </label>
+    <div class="col-xs-2 col-main"></div>
+    <div class="col-xs-3 col-main">
+        <input name="short" type="checkbox" class="form-control">短期集中
     </div>
-    
-    <div class="col-xs-6" style="background-color:blue;">
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">セカンドオピニオン
-      </label>
+    <div class="col-xs-2 col-main"></div>
+    <div class="col-xs-3 col-main">
+      <input name="whitening" type="checkbox" class="form-control">ホワイトニング
     </div>
+    <div class="col-xs-2 col-main"></div>
   </div>
 
 
   <div class="row">
-    <div class="col-xs-6" style="background-color:red;">
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">インプラント
-      </label>
+    <div class="col-xs-2 col-main"></div>
+    <div class="col-xs-3 col-main">
+        <input name="second" type="checkbox" class="form-control">セカンドオピニオン
     </div>
-    
-    <div class="col-xs-6" style="background-color:blue;">
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">矯正
-      </label>
+    <div class="col-xs-2 col-main"></div>
+    <div class="col-xs-3 col-main">
+      <input name="cleaning" type="checkbox" class="form-control">クリーニング
     </div>
+    <div class="col-xs-2 col-main"></div>
   </div>
-
 
   <div class="row">
-    <div class="col-xs-6" style="background-color:red;">
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">審美
-      </label>
+    <div class="col-xs-2 col-main"></div>
+    <div class="col-xs-3 col-main">
+        <input name="anesthesia" type="checkbox" class="form-control">麻酔
     </div>
-    
-    <div class="col-xs-6" style="background-color:blue;">
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">子供にやさしい
-      </label>
+    <div class="col-xs-2 col-main"></div>
+    <div class="col-xs-3 col-main">
+      <input name="implant" type="checkbox" class="form-control">インプラント
     </div>
+    <div class="col-xs-2 col-main"></div>
   </div>
-
 
   <div class="row">
-    <div class="col-xs-6" style="background-color:red;">
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">インプラント
-      </label>
+    <div class="col-xs-2 col-main"></div>
+    <div class="col-xs-3 col-main">
+        <input name="denture" type="checkbox" class="form-control">矯正
     </div>
-    
-    <div class="col-xs-6" style="background-color:blue;">
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">矯正
-      </label>
+    <div class="col-xs-2 col-main"></div>
+    <div class="col-xs-3 col-main">
+      <input name="cosmetic" type="checkbox" class="form-control">審美
     </div>
+    <div class="col-xs-2 col-main"></div>
   </div>
-
 
   <div class="row">
-    <div class="col-xs-6" style="background-color:red;">
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">入れ歯
-      </label>
+    <div class="col-xs-2 col-main"></div>
+    <div class="col-xs-3 col-main">
+        <input name="child" type="checkbox" class="form-control">子供にやさしい
     </div>
-    <div class="col-xs-6" style="background-color:blue;">
-<!--
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">子供にやさしい
-      </label>
--->
+    <div class="col-xs-2 col-main"></div>
+    <div class="col-xs-3 col-main">
+      <input name="denture" type="checkbox" class="form-control">入れ歯
     </div>
+    <div class="col-xs-2 col-main"></div>
   </div>
-
 
   <div class="row">
-    <div class="col-xs-12" style="background-color:red;">
-      設備・環境
-    </div>
+    <div class="col-xs-12 col-space"></div>
   </div>
-
 
   <div class="row">
-    <div class="col-xs-6" style="background-color:red;">
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">大規模(診療台10台以上)
-      </label>
+    <div class="col-xs-2 col-main"></div>
+    <div class="col-xs-3 col-main">
+        <input name="large" type="checkbox" class="form-control">大規模施設
     </div>
-    
-    <div class="col-xs-6" style="background-color:blue;">
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">急患対応
-      </label>
+    <div class="col-xs-2 col-main"></div>
+    <div class="col-xs-3 col-main">
+      <input name="emergency" type="checkbox" class="form-control">急患対応
     </div>
+    <div class="col-xs-2 col-main"></div>
   </div>
-
 
   <div class="row">
-    <div class="col-xs-6" style="background-color:red;">
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">訪問診療
-      </label>
+    <div class="col-xs-2 col-main"></div>
+    <div class="col-xs-3 col-main">
+        <input name="visit" type="checkbox" class="form-control">訪問診療
     </div>
-    
-    <div class="col-xs-6" style="background-color:blue;">
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">CT
-      </label>
+    <div class="col-xs-2 col-main"></div>
+    <div class="col-xs-3 col-main">
+      <input name="ct" type="checkbox" class="form-control">CT
     </div>
+    <div class="col-xs-2 col-main"></div>
   </div>
-
 
   <div class="row">
-    <div class="col-xs-6" style="background-color:red;">
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">オンライン予約
-      </label>
+    <div class="col-xs-2 col-main"></div>
+    <div class="col-xs-3 col-main">
+        <input name="online" type="checkbox" class="form-control">オンライン予約
     </div>
-    <div class="col-xs-6" style="background-color:blue;">
-<!--
-      <label class="checkbox-inline">
-        <input type="checkbox" id="inlineCheckbox1" value="option1">子供にやさしい
-      </label>
--->
+    <div class="col-xs-2 col-main"></div>
+    <div class="col-xs-3 col-main">
+      <input type="checkbox" class="form-control">
     </div>
+    <div class="col-xs-2 col-main"></div>
   </div>
-
 
   <div class="row">
-    <div class="col-xs-12" style="background-color:red;">
-      <p class="text-center"><button type="submit" class="btn btn-default btn-xs">検索</button></p>
+    <div class="col-xs-12 col-space"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-space"><input type="submit" value="検索"></form>
     </div>
   </div>
 
+  <div class="row">
+    <div class="col-xs-12 col-space"></div>
+  </div>
 
+  </div>
+</body>
 
-</div>
-<footer style="background-color:gray">Footer</footer>
-
-<i class="fa fa-twitter"></i>
+<footer style="background-color:gray">©現在、作り途中です。。。</footer>
