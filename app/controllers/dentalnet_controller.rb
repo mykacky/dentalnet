@@ -8,7 +8,7 @@ class DentalnetController < ApplicationController
   end
 
   def result
-    @eva = Eva.find(2)
+    @hospitals = Hospital.all
   end
 
   def comment
@@ -16,7 +16,7 @@ class DentalnetController < ApplicationController
   end
 
   def location
-    @eva = Eva.find(2)
+    @hospitals = Hospital.all
   end
 
 

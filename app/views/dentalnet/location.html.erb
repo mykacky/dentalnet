@@ -1,11 +1,8 @@
-<!--  <p>Hellp World!</p> -->
-<!--  <%= @eva.user_comment %> -->
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/main.css">
-
 </head>
 
 <header>DENTAL NET</header>
@@ -20,15 +17,17 @@
   </div>
 
   <div class="row">
-    <div class="col-xs-1 col-photo"></div>
-    <div class="col-xs-10 col-photo">地図</div>
-    <div class="col-xs-1 col-photo"></div>
+    <div class="col-xs-1 col-map"></div>
+    <div class="col-xs-10 col-map">
+      <div id="map" style='width: 100%; height: 100%;'></div>
+    </div>
+    <div class="col-xs-1 col-map"></div>
   </div>
-
+<!--
   <div class="row">
   <div class="col-xs-12 col-space"></div>
   </div>
-
+-->
   <div class="row">
     <div class="col-xs-12 col-space" style="background-color: darkgoldenrod;">医院一覧</div>
   </div>
@@ -46,21 +45,38 @@
  height: 30px; background-color: orange;"></div>
   </div>
 
+<% @hospitals.each do |hospital| %>
   <div class="row">
     <div class="col-xs-1" style="line-height: 30px;
  height: 30px; background-color: bisque;"></div>
     <div class="col-xs-6" style="line-height: 30px;
- height: 30px; background-color: bisque;">医院名</div>
+ height: 30px; background-color: bisque;"><%= hospital.dental_name %></div>
     <div class="col-xs-2" style="line-height: 30px;
  height: 30px; background-color: bisque;">評価</div>
     <div class="col-xs-2" style="line-height: 30px;
  height: 30px; background-color: bisque;">距離</div>
     <div class="col-xs-1" style="line-height: 30px;
  height: 30px; background-color: bisque;"></div>
-  </div>
-
-
 </div>
+<% end %>
+
+<script type="text/javascript">
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+    markers = handler.addMarkers([
+      {
+        "lat": 35.658689,
+        "lng": 139.697798,
+        "infowindow": "テックキャンプ渋谷オフィス",
+        mapTypeControl: false
+      }
+    ]);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+    handler.getMap().setZoom(16);
+  });
+
+</script>
 
 </body>
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160619033122) do
+ActiveRecord::Schema.define(version: 20160626083345) do
 
   create_table "evas", force: :cascade do |t|
     t.integer  "dental_id",    limit: 4
@@ -97,6 +97,11 @@ ActiveRecord::Schema.define(version: 20160619033122) do
     t.string   "user_pic",    limit: 255
     t.datetime "create_date"
     t.datetime "update_date"
+    t.string   "title",       limit: 255
+    t.string   "description", limit: 255
+    t.string   "address",     limit: 255
+    t.float    "latitude",    limit: 24
+    t.float    "longitude",   limit: 24
   end
 
 end
