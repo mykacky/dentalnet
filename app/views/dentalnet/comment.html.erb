@@ -1,0 +1,61 @@
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<header>DENTAL NET</header>
+
+<body>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-xs-12 col-space"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10">
+      <%= form_tag('/comment', method: :post) do %>
+      <Textarea name="user_comment" rows="5" cols="35">いかがでしたか？</Textarea>
+    </div>
+    <div class="col-xs-1"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-space"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10">
+      <select name="evaluation">
+        <option value="5">最高！通い詰める</option>
+        <option value="4">よかった、また行く</option>
+        <option value="3">いたって普通。。</option>
+        <option value="2">う〜ん、まぁまぁ</option>
+        <option value="1">最悪、もう行かない</option>
+      </select>
+    </div>
+    <div class="col-xs-1"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-space"><input type="submit" value="投稿">
+<% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-space"></div>
+  </div>
+
+</div>
+</body>
+
+<footer style="background-color:gray">©現在、作り途中です。。。</footer>

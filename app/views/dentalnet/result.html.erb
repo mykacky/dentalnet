@@ -1,41 +1,51 @@
 <!--  <p>Hellp World!</p> -->
-<!--  <%= @eva.user_comment %> -->
+
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<header style="background-color:gray">DELTAL NET</header>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/gmaip_fix.css">
+<link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<header>DENTAL NET</header>
+
+<body>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 <div class="container-fluid">
+
   <div class="row">
-    <div class="col-xs-8" style="background-color:red;">DELTAL NOW</div>
-    <div class="col-xs-4" style="background-color:yellow;"><button type="submit" class="btn btn-default">投稿</button></div>
+    <div class="col-xs-12 col-space"></div>
   </div>
 
   <div class="row">
-    <div class="row-height"
-    <div class="col-xs-3 col-height col-top" style="background-color:red;">
-      <label class="checkbox-inline">
-        <a href="#" class="btn btn-default btn-xs active" role="button">トップ</a>
-      </label>
-    </div>
-    
-    <div class="col-xs-3 col-height col-top" style="background-color:blue;">
-      <label class="checkbox-inline">
-        <a href="#" class="btn btn-default btn-xs active" role="button">口コミ</a>
-      </label>
-    </div>
+    <div class="col-xs-1 col-main" style="border-color: blue; background-color: lightblue;"></div>
+    <div class="col-xs-10 col-main" style="border-color: blue; background-color: lightblue;">検索結果</div>
+    <div class="col-xs-1 col-main" style="border-color: blue; background-color: lightblue;"></div>
+  </div>
 
-<div class="col-xs-3 col-height col-top" style="background-color:red;">
-      <label class="checkbox-inline">
-        <a href="#" class="btn btn-default btn-xs active" role="button">地図</a>
-      </label>
-    </div>
-    
-    <div class="col-xs-3 col-height col-top" style="background-color:blue;">
-      <label class="checkbox-inline">
-        <a href="#" class="btn btn-default btn-xs active" role="button">医院詳細</a>
-      </label>
-    </div>
- </div>
+<% @hospitals.each do |hospital| %>
+  <div class="row">
+    <div class="col-xs-1" style="line-height: 30px;
+ height: 30px; background-color: bisque;"></div>
+    <div class="col-xs-6" style="line-height: 30px;
+ height: 30px; background-color: bisque;"><a href="/dental_detail?hospital_id=<%=hospital.hospital_id%>"><%=hospital.dental_name%></div>
+    <div class="col-xs-2" style="line-height: 30px;
+ height: 30px; background-color: bisque;">評価</div>
+    <div class="col-xs-2" style="line-height: 30px;
+ height: 30px; background-color: bisque;">距離</div>
+    <div class="col-xs-1" style="line-height: 30px;
+ height: 30px; background-color: bisque;"></div>
+</div>
+<% end %>
+</div>
 
+</div>
 
-<footer style="background-color:gray">Footer</footer>
+</body>
 
-<i class="fa fa-twitter"></i>
+<footer style="background-color:gray">©現在、作り途中です。。。</footer>
+

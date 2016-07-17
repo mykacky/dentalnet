@@ -1,7 +1,8 @@
 class CreateHospitals < ActiveRecord::Migration
   def change
    create_table :hospitals do |t|
-      t.integer  :dental_id
+      t.integer  :id
+      t.integer  :hospital_id
       t.text      :dental_name
       t.text      :zip
       t.text      :region
