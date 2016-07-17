@@ -16,7 +16,9 @@ class DentalnetController < ApplicationController
   def result_category
     #@hospitals = Hospital.all
     # @hospitals = Hospital.where(genre_waittime: params[:waittime])
-    @hospitals = Hospital.where('genre_waittime(?) or genre_bridge(?) or genre_whitening(?) or genre_cleaning(?) or genre_implant(?) or genre_cosmetic(?) or genre_denture(?) or genre_ceramic(?) or genre_root(?) or genre_short(?) or genre_second(?) or genre_anesthesia(?) or genre_correction(?) or genre_child(?)' , params[:waittime], params[:bridge], params[:whitening], params[:cleaning], params[:implant], params[:cosmetic], params[:denture], params[:ceramic], params[:root], params[:short],params[:second],params[:anesthesia],params[:correction],params[:child])
+    @hospitals = Hospital.where('genre_waittime = ? or genre_bridge = ? or genre_whitening = ? or genre_cleaning = ? or genre_implant = ? or genre_cosmetic = ? or genre_denture = ? or genre_ceramic = ? or genre_root = ? or genre_short = ? or genre_second = ? or genre_anesthesia = ? or genre_correction = ? or genre_child = ?', params[:waittime], params[:bridge], params[:whitening], params[:cleaning], params[:implant], params[:cosmetic], params[:denture], params[:ceramic], params[:root], params[:short],params[:second],params[:anesthesia],params[:correction],params[:child])
+
+
 #genre_ceramic(?)' , {params genre_waittime
 # where("genre_waittime = ? or job2 = ? or job3 = ? or job4 = ? or job5 = ?", {params[:waittime]},{params[:waittime]}
 
@@ -29,7 +31,7 @@ class DentalnetController < ApplicationController
   def dental_detail
    # Hospital.joins(:reps) N+1
    #binding.pry
-    @hospital = Hospital.find(params[:hospital_id])
+    @hospital = Hospital.find(params[:id])
 
   end
 
