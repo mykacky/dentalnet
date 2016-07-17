@@ -1,0 +1,214 @@
+<!--  <p>Hellp World!</p> -->
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/gmaip_fix.css">
+<link rel="stylesheet" href="css/main.css">
+
+</head>
+
+  <header><a href="/">DENTAL NET</a></header>
+
+<body>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-xs-12 col-space"></div>
+  </div>
+<!--
+  <div class="row">
+    <div class="col-xs-3 col-main" style="border-color: blue; background-color: lightblue;">トップ</div>
+    <div class="col-xs-3 col-main" style="border-color: blue; background-color: lightblue;">口コミ</div>
+    <div class="col-xs-3 col-main" style="border-color: blue; background-color: lightblue;">地図</div>
+    <div class="col-xs-3 col-main" style="border-color: blue; background-color: lightblue;">医院詳細</div>
+  </div>
+-->
+  <div class="row">
+    <div class="col-xs-1 col-space"></div>
+    <div class="col-xs-5 col-space"><%= @hospital.dental_name %></div>
+    <div class="col-xs-5 col-space">評価：⭐⭐⭐⭐⭐️</div>
+    <div class="col-xs-1 col-space"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-1 col-photo"></div>
+    <div class="col-xs-10 col-photo">写真</div>
+    <div class="col-xs-1 col-photo"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">わきあいあいがんばっています！</div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-space"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-space" style="background-color: darkgoldenrod;">地図</div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-1 col-photo"></div>
+    <div class="col-xs-10 col-photo">写真</div>
+    <div class="col-xs-1 col-photo"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10">連絡先情報 TEL : <%= @hospital.tel %> / HP : <a href="<%=@hospital.website%>" target="_blank"><%=@hospital.website%></a>
+    </div>
+    <div class="col-xs-1"></div>
+  </div>
+
+  <div class="row">
+  <div class="col-xs-12 col-space"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12 col-space" style="background-color: darkgoldenrod;">医院詳細</div>
+  </div>
+
+<%@hospital.reps.each do |rep| %>
+  <div class="row">
+    <div class="col-xs-1 col-photo"></div>
+    <div class="col-xs-3 col-photo">写真</div>
+    <div class="col-xs-6 col-photo"><%=rep.rep_comment%></div>
+    <div class="col-xs-1 col-photo"></div>
+  </div>
+<% end %>
+
+  <div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10">得意なジャンル：
+    <% if @hospital.genre_waittime==true %>
+    夜間営業&nbsp;
+    <% end %>
+
+    <% if @hospital.genre_bridge==true %>
+    ブリッジ&nbsp;
+    <% end %>
+
+    <% if @hospital.genre_whitening==true %>
+    ホワイトニング&nbsp;
+    <% end %>
+
+    <% if @hospital.genre_cleaning==true %>
+    クリーニング&nbsp;
+    <% end %>
+
+    <% if @hospital.genre_implant==true %>
+    インプラント&nbsp;
+    <% end %>
+
+    <% if @hospital.genre_cosmetic==true %>
+    審美&nbsp;
+    <% end %>
+
+    <% if @hospital.genre_denture==true %>
+    入歯&nbsp;
+    <% end %>
+
+    <% if @hospital.genre_ceramic==true %>
+    セラミック&nbsp;
+    <% end %>
+
+    <% if @hospital.genre_root==true %>
+    根菅治療&nbsp;
+    <% end %>
+
+    <% if @hospital.genre_short==true %>
+    短期治療&nbsp;
+    <% end %>
+
+    <% if @hospital.genre_second==true %>
+    セカンドオピニオン&nbsp;
+    <% end %>
+
+    <% if @hospital.genre_anesthesia==true %>
+    麻酔&nbsp;
+    <% end %>
+
+    <% if @hospital.genre_correction==true %>
+    矯正&nbsp;
+    <% end %>
+
+    <% if @hospital.genre_short==true %>
+    短期治療&nbsp;
+    <% end %>
+
+   </div>
+    <div class="col-xs-1"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-1"></div>
+    <div class="col-xs-10">施設情報：
+    <% if @hospital.facility_large==true %>
+    大規模&nbsp;
+    <% end %>
+
+    <% if @hospital.facility_emergency==true %>
+    救急&nbsp;
+    <% end %>
+
+    <% if @hospital.facility_kids==true %>
+    児童スペース&nbsp;
+    <% end %>
+
+    <% if @hospital.facility_visit==true %>
+    訪問治療&nbsp;
+    <% end %>
+
+    <% if @hospital.facility_ct==true %>
+    CT&nbsp;
+    <% end %>
+
+    <% if @hospital.facility_online==true %>
+    オンライン予約&nbsp;
+    <% end %>
+
+    <% if @hospital.genre_ceramic==true %>
+    セラミック&nbsp;
+    <% end %>
+
+    <% if @hospital.genre_root==true %>
+    根菅治療&nbsp;
+    <% end %>
+
+    <% if @hospital.genre_short==true %>
+    短期治療&nbsp;
+    <% end %>
+
+    <% if @hospital.genre_second==true %>
+    セカンドオピニオン&nbsp;
+    <% end %>
+
+    <% if @hospital.genre_anesthesia==true %>
+    麻酔&nbsp;
+    <% end %>
+
+    <% if @hospital.genre_correction==true %>
+    矯正&nbsp;
+    <% end %>
+
+    <% if @hospital.genre_short==true %>
+    短期治療&nbsp;
+    <% end %>
+
+   </div>
+    <div class="col-xs-1"></div>
+  </div>
+
+
+</div>
+
+</body>
+
+<footer style="background-color:gray">©現在、作り途中です。。。</footer>
+

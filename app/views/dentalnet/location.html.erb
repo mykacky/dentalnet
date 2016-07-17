@@ -1,0 +1,87 @@
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/main.css">
+</head>
+
+<header>DENTAL NET</header>
+
+<body>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-space" style="background-color: darkgoldenrod;">地図</div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-1 col-map"></div>
+    <div class="col-xs-10 col-map">
+      <div id="map" style='width: 100%; height: 100%;'></div>
+    </div>
+    <div class="col-xs-1 col-map"></div>
+  </div>
+<!--
+  <div class="row">
+  <div class="col-xs-12 col-space"></div>
+  </div>
+-->
+  <div class="row">
+    <div class="col-xs-12 col-space" style="background-color: darkgoldenrod;">医院一覧</div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-1" style="line-height: 30px;
+ height: 30px; background-color: orange;"></div>
+    <div class="col-xs-6" style="line-height: 30px;
+ height: 30px; background-color: orange;">医院名</div>
+    <div class="col-xs-2" style="line-height: 30px;
+ height: 30px; background-color: orange;">評価</div>
+    <div class="col-xs-2" style="line-height: 30px;
+ height: 30px; background-color: orange;">距離</div>
+    <div class="col-xs-1" style="line-height: 30px;
+ height: 30px; background-color: orange;"></div>
+  </div>
+
+<% @hospitals.each do |hospital| %>
+  <div class="row">
+    <div class="col-xs-1" style="line-height: 30px;
+ height: 30px; background-color: bisque;"></div>
+    <div class="col-xs-6" style="line-height: 30px;
+ height: 30px; background-color: bisque;"><%= hospital.dental_name %></div>
+    <div class="col-xs-2" style="line-height: 30px;
+ height: 30px; background-color: bisque;">評価</div>
+    <div class="col-xs-2" style="line-height: 30px;
+ height: 30px; background-color: bisque;">距離</div>
+    <div class="col-xs-1" style="line-height: 30px;
+ height: 30px; background-color: bisque;"></div>
+</div>
+<% end %>
+</div>
+
+<script type="text/javascript">
+
+  handler = Gmaps.build('Google');
+  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+    markers = handler.addMarkers([
+      {
+        "lat": 35.69999560000001,
+        "lng": 139.697798,
+        "infowindow": "テックキャンプ渋谷オフィス",
+        mapTypeControl: false
+      }
+    ]);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+    handler.getMap().setZoom(16);
+  });
+
+document.getElementById( 'result' ).innerHTML = '<dl><dt>緯度</dt><dd>' + lat + '</dd><dt>経度</dt><dd>' + lng + '</dd><dt>高度</dt><dd>' + alt + '</dd><dt>緯度、経度の精度</dt><dd>' + accLatlng + '</dd><dt>高度の精度</dt><dd>' + accAlt + '</dd><dt>方角</dt><dd>' + heading + '</dd><dt>速度</dt><dd>' + speed + '</dd></dl>' ;
+</script>
+
+</body>
+
+<footer style="background-color:gray">©現在、作り途中です。。。</footer>
+
