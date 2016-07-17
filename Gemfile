@@ -42,16 +42,24 @@ group :development do
   gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  # gem 'spring'
+  gem 'pry-rails'
 end
 
-  gem 'pry-rails'
   gem 'compass-rails','~> 2.0'
   gem 'sprockets', '2.11.0'
   gem 'font-awesome-rails'
   gem 'gmaps4rails'
   gem 'geocoder'
+  gem 'devise'
   gem 'omniauth'
   gem 'omniauth-facebook'
   gem 'omniauth-twitter'
   gem 'config'
+  gem 'carrierwave'
+  gem 'rmagick'
+  gem 'foundation-rails', '5.4.3.1'
+
+group :production, :staging do
+  gem 'rails_12factor'
+end

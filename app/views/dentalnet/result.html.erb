@@ -22,69 +22,26 @@
   </div>
 
   <div class="row">
-    <div class="col-xs-3 col-main" style="border-color: blue; background-color: lightblue;">トップ</div>
-    <div class="col-xs-3 col-main" style="border-color: blue; background-color: lightblue;">口コミ</div>
-    <div class="col-xs-3 col-main" style="border-color: blue; background-color: lightblue;">地図</div>
-    <div class="col-xs-3 col-main" style="border-color: blue; background-color: lightblue;">医院詳細</div>
+    <div class="col-xs-1 col-main" style="border-color: blue; background-color: lightblue;"></div>
+    <div class="col-xs-10 col-main" style="border-color: blue; background-color: lightblue;">検索結果</div>
+    <div class="col-xs-1 col-main" style="border-color: blue; background-color: lightblue;"></div>
   </div>
 
+<% @hospitals.each do |hospital| %>
   <div class="row">
-    <div class="col-xs-1 col-space"></div>
-    <div class="col-xs-5 col-space">丸橋医院</div>
-    <div class="col-xs-5 col-space">評価：⭐⭐⭐⭐⭐️</div>
-    <div class="col-xs-1 col-space"></div>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-1 col-photo"></div>
-    <div class="col-xs-10 col-photo">写真</div>
-    <div class="col-xs-1 col-photo"></div>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-12">わきあいあいがんばっています！</div>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-12 col-space"></div>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-12 col-space" style="background-color: darkgoldenrod;">地図</div>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-1 col-photo"></div>
-    <div class="col-xs-10 col-photo">写真</div>
-    <div class="col-xs-1 col-photo"></div>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-1"></div>
-    <div class="col-xs-10">連絡先情報</div>
-    <div class="col-xs-1"></div>
-  </div>
-
-  <div class="row">
-  <div class="col-xs-12 col-space"></div>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-12 col-space" style="background-color: darkgoldenrod;">医院詳細</div>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-1 col-photo"></div>
-    <div class="col-xs-3 col-photo">写真</div>
-    <div class="col-xs-6 col-photo">コメント</div>
-    <div class="col-xs-1 col-photo"></div>
-  </div>
-
-  <div class="row">
-    <div class="col-xs-1"></div>
-    <div class="col-xs-10">得意なジャンル：インプラント</div>
-    <div class="col-xs-1"></div>
-  </div>
+    <div class="col-xs-1" style="line-height: 30px;
+ height: 30px; background-color: bisque;"></div>
+    <div class="col-xs-6" style="line-height: 30px;
+ height: 30px; background-color: bisque;"><a href="/dental_detail?hospital_id=<%=hospital.hospital_id%>"><%=hospital.dental_name%></div>
+    <div class="col-xs-2" style="line-height: 30px;
+ height: 30px; background-color: bisque;">評価</div>
+    <div class="col-xs-2" style="line-height: 30px;
+ height: 30px; background-color: bisque;">距離</div>
+    <div class="col-xs-1" style="line-height: 30px;
+ height: 30px; background-color: bisque;"></div>
+</div>
+<% end %>
+</div>
 
 </div>
 

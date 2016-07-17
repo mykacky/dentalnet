@@ -16,6 +16,9 @@
 
 
 <div class="container-fluid">
+<%= link_to "Facebookログイン", user_facebook_omniauth_authorize_path %>
+<%= link_to "Facebookサインアウト", destroy_user_session_path, method: :delete %>
+
 
   <div class="row">
     <div class="col-xs-12 col-space"></div>
@@ -23,11 +26,11 @@
 
   <div class="row">
     <div class="col-xs-1"></div>
-    <div class="col-xs-10">
-        <form action="">
-          <input type="text" class="form-control">
-          <input type="submit" value="検索">
-        </form>
+    <div class="col-xs-9"></div>
+      <form action="/result">
+        <input type="text" name="dental_name" class="form-control">
+        <input type="submit" value="検索">
+      </form>
     </div>
     <div class="col-xs-1"></div>
   </div>
@@ -39,7 +42,8 @@
   <div class="row">
     <div class="col-xs-2 col-main"></div>
     <div class="col-xs-3 col-main" style="background-color: orange;">
-      <i class="fa fa-map-marker fa-3x" aria-hidden="true"></i>
+      <a href="location">
+      <i class="fa fa-map-marker fa-3x" aria-hidden="true"></i></a>
     </div>
     <div class="col-xs-2 col-main"></div>
     <div class="col-xs-3 col-main" style="background-color: orange;">
