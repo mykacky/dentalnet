@@ -428,7 +428,7 @@ width: 102px;}
 .gallery-img{}
 .gallery-items-text{}
 .gallery-items-text p{color: #9ea5a5; font-size: 14px; margin: 0; padding-top: 45px;font-family: 'Raleway', sans-serif; font-weight: 400;}
-#gallery .owl-carousel .owl-controls{left: 0; margin-top: -40px; position: absolute; text-align: left; top: 50%; 
+#gallery .owl-carousel .owl-controls{left: 0; margin-top: -40px; position: absolute; text-align: left; top: 50%;
 width: 100%;}
 #gallery .owl-carousel .owl-controls .owl-buttons{}
 #gallery .owl-carousel .owl-controls .owl-buttons div{color: #9fa9a9;font-size: 50px; display: inline-block}
@@ -453,7 +453,6 @@ width: 100%;}
 .contant-2-img{}
 #contant-2 .block-right{}
 .contant-2-text-area{padding-top: 102px;}
-.contant-2-text-area:{}
 .contant-2-header:after{background: #949C9C;
 content: "";
 height: 2px;
